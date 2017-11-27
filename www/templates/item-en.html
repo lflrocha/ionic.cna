@@ -4,7 +4,7 @@
         <button class="left button button-icon icon ion-arrow-left-c" ng-click="back()"></button>
     </ion-nav-buttons>
 
-    <ion-content>
+    <ion-content delegate-handle="myPageDelegate">
 
         <div class="pergunta">
             <div class="imagem">
@@ -24,10 +24,17 @@
                     <ion-radio class="opcao" ng-model="inputForm.pergunta1" value="E" name="p1"> <img src="../img/flag_can.png" /> Canada</ion-radio>
                   </ion-list>
             </div>
+
+            <button ng-click="scrollP2()">Scroll to Top!</button>
+
         </div>
 
+
+
+
         <div class="pergunta">
-            <div class="imagem">
+
+            <div class="imagem" id="pergunta2">
                 <img src="img/pergunta2.png" />
             </div>
 
@@ -44,6 +51,9 @@
                     <ion-radio class="opcao" ng-model="inputForm.pergunta1" value="E" name="p2"> <img src="../img/flag_hol.png" /> Netherlands</ion-radio>
                   </ion-list>
             </div>
+
+            <button ng-click="scrollP3()">Scroll to Top!</button>
+
         </div>
 
         <div class="pergunta">
@@ -66,12 +76,9 @@
             </div>
         </div>
 
+        <button ng-click="scrollP4()">Scroll to Top!</button>
 
-
-
-
-
-
+        <div class="pergunta">
 
             <div class="item">
               <h2>Preencha tus infomaciones:</h2>

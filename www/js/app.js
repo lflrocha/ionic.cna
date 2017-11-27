@@ -80,7 +80,7 @@ angular.module('starter', ['ionic'])
     $urlRouterProvider.otherwise("capa");
 })
 
-.controller("MainController", function($scope, $rootScope, $state, $stateParams, $ionicHistory, $pouchDB) {
+.controller("MainController", function($scope, $rootScope, $state, $stateParams, $ionicHistory, $pouchDB, $ionicScrollDelegate) {
 
     $scope.items = {};
 
@@ -143,7 +143,16 @@ angular.module('starter', ['ionic'])
         $ionicHistory.goBack();
     }
 
+    $scope.scrollP2 = function() {
+      $ionicScrollDelegate.scrollTo(0, 2000, true);
+    };
+
+    $scope.scrollP3 = function() {
+      $ionicScrollDelegate.scrollTo(0, 4000, true);
+    };
+
 })
+
 
 
 .service("$pouchDB", ["$rootScope", "$q", function($rootScope, $q) {

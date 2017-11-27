@@ -46,11 +46,11 @@
   background-color: #28B3AB;
   font-family: "AsapRegular";
   color: white;
-  width: 50vw;
+  width: 70vw;
   height: 18vh;
-  font-size: 4em;
+  font-size: 3em;
   border-radius: 25px;
-  margin: 6vh 0;
+  margin: 3vh 0;
   text-transform: uppercase;
 }
 
@@ -66,21 +66,21 @@
   text-align: center;
   color: white;
   font-family: "AsapBold";
-  font-size: 45px;
-  width: 1100px;
-  line-height: 60px;
+  font-size: 2em;
+  width: 70vw;
+  line-height: 2.5em;
   text-transform: uppercase;
   margin: 2vh auto;
 }
 
 .pergunta .opcao {
   border: 1px solid white;
-  width: 1090px;
+  width: 70vw;
   margin: 1.5vh auto;
   background-color: #28B3AB;
   border-radius: 25px;
-  height: 130px;
-  padding-top: 15px
+  height: 3vh;
+  padding-top: 1vh;
 
 }
 
@@ -101,7 +101,7 @@
   background-color: #28B3AB;
   color: white;
   font-family: "AsapMedium";
-  font-size: 45px;
+  font-size: 3em;
   text-transform: uppercase;
 
 }
