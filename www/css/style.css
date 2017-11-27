@@ -37,8 +37,8 @@
 
 .logo {
   text-align: center;
-  margin-top: 13vh;
-  margin-bottom: 7vh;
+  margin-top: 12vh;
+  margin-bottom: 6vh;
 }
 
 .capa button {
@@ -46,11 +46,11 @@
   background-color: #28B3AB;
   font-family: "AsapRegular";
   color: white;
-  width: 790px;
-  height: 130px;
-  font-size: 60px;
+  width: 50vw;
+  height: 18vh;
+  font-size: 4em;
   border-radius: 25px;
-  margin: 130px 0;
+  margin: 6vh 0;
   text-transform: uppercase;
 }
 
