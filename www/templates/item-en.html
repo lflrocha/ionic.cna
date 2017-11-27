@@ -1,0 +1,108 @@
+<ion-view title="Quiz CNA - English">
+
+    <ion-nav-buttons side="left">
+        <button class="left button button-icon icon ion-arrow-left-c" ng-click="back()"></button>
+    </ion-nav-buttons>
+
+    <ion-content>
+
+        <div class="pergunta">
+            <div class="imagem">
+                <img src="img/pergunta1.png" />
+            </div>
+
+            <div class="texto">
+                <p>Which of the agricultural exporter countries below have the most part of its territory designated for agricultural production?</p>
+            </div>
+
+            <div class="opcoes">
+                <ion-list>
+                    <ion-radio class="opcao" ng-model="inputForm.pergunta1" value="A" name="p1"> <img src="../img/flag_ger.png" /> Germany</ion-radio>
+                    <ion-radio class="opcao" ng-model="inputForm.pergunta1" value="B" name="p1"> <img src="../img/flag_bra.png" /> Brazil</ion-radio>
+                    <ion-radio class="opcao" ng-model="inputForm.pergunta1" value="C" name="p1"> <img src="../img/flag_fra.png" /> France</ion-radio>
+                    <ion-radio class="opcao" ng-model="inputForm.pergunta1" value="D" name="p1"> <img src="../img/flag_usa.png" /> United States</ion-radio>
+                    <ion-radio class="opcao" ng-model="inputForm.pergunta1" value="E" name="p1"> <img src="../img/flag_can.png" /> Canada</ion-radio>
+                  </ion-list>
+            </div>
+        </div>
+
+        <div class="pergunta">
+            <div class="imagem">
+                <img src="img/pergunta2.png" />
+            </div>
+
+            <div class="texto">
+                <p>Which of these countries uses the greatest amount of agrochemicals per hectare of production? (kg of active ingredients /ha)?</p>
+            </div>
+
+            <div class="opcoes">
+                <ion-list>
+                    <ion-radio class="opcao" ng-model="inputForm.pergunta1" value="A" name="p2"> <img src="../img/flag_ger.png" /> Germany</ion-radio>
+                    <ion-radio class="opcao" ng-model="inputForm.pergunta1" value="B" name="p2"> <img src="../img/flag_bra.png" /> Brazil</ion-radio>
+                    <ion-radio class="opcao" ng-model="inputForm.pergunta1" value="C" name="p2"> <img src="../img/flag_jap.png" /> Japan</ion-radio>
+                    <ion-radio class="opcao" ng-model="inputForm.pergunta1" value="D" name="p2"> <img src="../img/flag_fra.png" /> France</ion-radio>
+                    <ion-radio class="opcao" ng-model="inputForm.pergunta1" value="E" name="p2"> <img src="../img/flag_hol.png" /> Netherlands</ion-radio>
+                  </ion-list>
+            </div>
+        </div>
+
+        <div class="pergunta">
+            <div class="imagem">
+                <img src="img/pergunta3.png" />
+            </div>
+
+            <div class="texto">
+                <p>In which of these countries the rural producer is required by law to preserve between 20% and 80% of the native vegetation area in its rural property?</p>
+            </div>
+
+            <div class="opcoes">
+                <ion-list>
+                    <ion-radio class="opcao" ng-model="inputForm.pergunta1" value="A" name="p2"> <img src="../img/flag_ger.png" /> Germany</ion-radio>
+                    <ion-radio class="opcao" ng-model="inputForm.pergunta1" value="B" name="p2"> <img src="../img/flag_usa.png" /> United States</ion-radio>
+                    <ion-radio class="opcao" ng-model="inputForm.pergunta1" value="C" name="p2"> <img src="../img/flag_gbr.png" /> United Kingdom</ion-radio>
+                    <ion-radio class="opcao" ng-model="inputForm.pergunta1" value="D" name="p2"> <img src="../img/flag_bra.png" /> Brazil</ion-radio>
+                    <ion-radio class="opcao" ng-model="inputForm.pergunta1" value="E" name="p2"> <img src="../img/flag_aus.png" /> Australia</ion-radio>
+                  </ion-list>
+            </div>
+        </div>
+
+
+          <div class="testeVideo">
+              <video id="video" width="1920" height="1080">
+                  <source src="../img/video.mp4" type="video/mp4" />
+              </video>
+              <div class="overlayVideo">
+                  <p>Content above your video</p>
+              </div>
+          </div>
+
+
+
+
+
+
+            <div class="item">
+              <h2>Preencha tus infomaciones:</h2>
+
+              <label class="item item-input">
+                  <input type="text" ng-model="inputForm.firstname" placeholder="First Name">
+              </label>
+
+              <label class="item item-input">
+                  <input type="text" ng-model="inputForm.lastname" placeholder="Last Name">
+              </label>
+
+              <label class="item item-input">
+                  <input type="text" ng-model="inputForm.email" placeholder="Email">
+              </label>
+
+              <button class="button button-block button-positive" ng-click="save(inputForm.firstname, inputForm.lastname, inputForm.email, inputForm.pergunta1, inputForm.pergunta2, inputForm.pergunta3, 'en')">
+                  Save
+              </button>
+
+            </div>
+
+        </div>
+
+    </ion-content>
+</ion-view>
