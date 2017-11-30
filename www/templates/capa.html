@@ -1,21 +1,28 @@
 <ion-view title="Quiz CNA">
-    <ion-nav-buttons side="right">
-        <button class="right button button-icon icon ion-plus" ui-sref="item"></button>
-    </ion-nav-buttons>
 
-
+  <ion-nav-buttons side="left">
+    <button class="left button button-icon icon ion-arrow-left-c" ng-click="back()"></button>
+  </ion-nav-buttons>
 
     <ion-content class="capa">
 
-
-      <div class="logo">
-        <img src="img/logo.png">
+      <div class="capaInterna">
+        <div class="logo">
+          <img src="img/logo.png">
+          <p class="titulo">11th WTO Ministerial Conference </p>
+          <p class="data">December, 10-13th, 2017</p>
+        </div>
+        <div class="opcoes">
+          <ion-radio class="opcaoCapa" ng-model="inputForm.idioma" value="en" name="idioma">English</ion-radio>
+          <ion-radio class="opcaoCapa" ng-model="inputForm.idioma" value="es" name="idioma">Español</ion-radio>
+          <ion-radio class="opcaoCapa" ng-model="inputForm.idioma" value="br" name="idioma">Português</ion-radio>
+        </div>
       </div>
 
-      <div class="botoes">
-        <button ui-sref="item-en">English</button> <br />
-        <button ui-sref="item-es">Español</button> <br />
-        <button ui-sref="item-pt">Português</button>
+      <div class="rodape">
+          <div class="proximacapa">
+            <a ng-click="nextCapa(inputForm.idioma)">Start quiz</a>
+          </div>
       </div>
 
     </ion-content>
