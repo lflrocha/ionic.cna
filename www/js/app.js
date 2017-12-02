@@ -9,11 +9,11 @@ angular.module('starter', ['ionic'])
             StatusBar.styleDefault();
         }
     });
-    $pouchDB.setDatabase("nraboy-test");
+    $pouchDB.setDatabase("quizcna");
     if(ionic.Platform.isAndroid()) {
-        $pouchDB.sync("http://192.168.57.1:4984/test-database");
+        $pouchDB.sync("http://192.168.1.109:5984/quizcna");
     } else {
-        $pouchDB.sync("http://localhost:4984/test-database");
+        $pouchDB.sync("http://localhost:5984/quizcna");
     }
 })
 
