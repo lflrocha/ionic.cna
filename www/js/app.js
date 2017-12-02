@@ -11,9 +11,9 @@ angular.module('starter', ['ionic'])
     });
     $pouchDB.setDatabase("quizcna");
     if(ionic.Platform.isAndroid()) {
-        $pouchDB.sync("http://192.168.1.109:5984/quizcna");
+        $pouchDB.sync("http://45.56.114.69:5984/quizcna");
     } else {
-        $pouchDB.sync("http://192.168.1.109:5984/quizcna");
+        $pouchDB.sync("http://45.56.114.69:5984/quizcna");
     }
 })
 
