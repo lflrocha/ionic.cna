@@ -1,0 +1,42 @@
+<ion-view title="Quiz CNA - English">
+
+    <ion-nav-buttons side="left">
+      <button class="left button button-icon icon ion-arrow-left-c" ng-click="nextHome()"></button>
+    </ion-nav-buttons>
+
+    <ion-content>
+
+
+        <div class="pergunta">
+            <div class="imagem">
+                <img src="img/pergunta2.png" />
+            </div>
+
+            <div class="texto">
+                <p>Which of these countries uses the greatest amount of agrochemicals per hectare of production? (kg of active ingredients /ha)?</p>
+            </div>
+
+            <div class="opcoes">
+                <ion-list>
+                  <ion-radio class="opcao" ng-model="inputForm.pergunta2" value="A" name="p2"> <img src="img/flag_ger.png" /> Germany</ion-radio>
+                  <ion-radio class="opcao" ng-model="inputForm.pergunta2" value="B" name="p2"> <img src="img/flag_bra.png" /> Brazil</ion-radio>
+                  <ion-radio class="opcao" ng-model="inputForm.pergunta2" value="C" name="p2"> <img src="img/flag_jap.png" /> Japan</ion-radio>
+                  <ion-radio class="opcao" ng-model="inputForm.pergunta2" value="D" name="p2"> <img src="img/flag_fra.png" /> France</ion-radio>
+                  <ion-radio class="opcao" ng-model="inputForm.pergunta2" value="E" name="p2"> <img src="img/flag_hol.png" /> Netherlands</ion-radio>
+                  </ion-list>
+            </div>
+
+        </div>
+        <div class="rodape">
+            <div class="bolas">
+              <img src="img/bullet2.png" />
+            </div>
+            <div class="proxima">
+              <a ng-click="nextP4(inputForm.pergunta2)">Ok!</a>
+            </div>
+        </div>
+
+
+
+    </ion-content>
+</ion-view>

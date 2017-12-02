@@ -1,0 +1,40 @@
+<ion-view title="Quiz CNA - Español">
+
+    <ion-nav-buttons side="left">
+      <button class="left button button-icon icon ion-arrow-left-c" ng-click="nextHome()"></button>
+    </ion-nav-buttons>
+
+    <ion-content>
+
+        <div class="pergunta">
+            <div class="imagem">
+                <img src="img/pergunta3.png" />
+            </div>
+
+            <div class="texto">
+                <p>¿En cuál de esos países el productor rural es obligado por ley a preservar entre el 20% e 80% del área de vegetación nativa en su propiedad rural?</p>
+            </div>
+
+            <div class="opcoes">
+                <ion-list>
+                  <ion-radio class="opcao" ng-model="inputForm.pergunta3" value="A" name="p3"> <img src="img/flag_ger.png" /> Alemania</ion-radio>
+                  <ion-radio class="opcao" ng-model="inputForm.pergunta3" value="B" name="p3"> <img src="img/flag_usa.png" /> Estados Unidos</ion-radio>
+                  <ion-radio class="opcao" ng-model="inputForm.pergunta3" value="C" name="p3"> <img src="img/flag_gbr.png" /> Reino Unido</ion-radio>
+                  <ion-radio class="opcao" ng-model="inputForm.pergunta3" value="D" name="p3"> <img src="img/flag_bra.png" /> Brasil</ion-radio>
+                  <ion-radio class="opcao" ng-model="inputForm.pergunta3" value="E" name="p3"> <img src="img/flag_aus.png" /> Australia</ion-radio>
+                  </ion-list>
+            </div>
+
+        </div>
+        <div class="rodape">
+            <div class="bolas">
+              <img src="img/bullet3.png" />
+            </div>
+            <div class="proxima">
+              <a ng-click="nextP6(inputForm.pergunta3)">Ok</a>
+            </div>
+        </div>
+
+
+    </ion-content>
+</ion-view>

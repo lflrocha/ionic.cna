@@ -1,0 +1,66 @@
+<ion-view title="Quiz CNA - English">
+
+    <ion-nav-buttons side="left">
+        <button class="left button button-icon icon ion-arrow-left-c" ng-click="back()"></button>
+    </ion-nav-buttons>
+
+    <ion-content>
+
+        <div class="resposta">
+
+          <div class="logo">
+            <img src="img/cadastro.png">
+          </div>
+
+          <div class="certoerrado" ng-if="p3=='D'">
+            <img src="img/certo.png">
+            <p>Correct!</p>
+          </div>
+
+          <div class="certoerrado" ng-if="p3!='D'">
+            <img src="img/errado.png">
+            <p>Ops, that's wrong!</p>
+          </div>
+
+          <hr>
+
+          <div class="repostacerta">
+            <div class="bandeira">
+              <img src="img/flag_big_bra.png">
+            </div>
+
+            <div class="texto">
+              <p class="paisBrasil">Brazil</p>
+            </div>
+          </div>
+
+          <div class="respostaserradas">
+            <p>In Legal Forest Reserve areas, the size to be preserved is determined by
+              the biome in which the property is included. Thus, 20% of the rural property
+              areas included in the biomes Pantanal, Atlantic Forest, Caatinga and Pampas
+              (grasslands) should be preserved. In Cerrado (Brazilian savanna) biome, the
+              preservation is of 35% of the areas included in the Legal Amazon and 20% in
+              the other areas. In the Amazon biome, the preservation should be of 80%.</p>
+          </div>
+
+          <hr>
+
+          <div class="fonte">
+            <p>Source: Brazilian Forest Code (Law n. 12.651).</p>
+          </div>
+
+        </div>
+
+
+        <div class="rodape">
+            <div class="bolas">
+              <img src="img/bullet3.png" />
+            </div>
+            <div class="proxima">
+              <a ng-click="save()">Finish</a>
+            </div>
+        </div>
+
+
+    </ion-content>
+</ion-view>

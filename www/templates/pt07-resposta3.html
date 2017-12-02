@@ -1,0 +1,67 @@
+<ion-view title="Quiz CNA - English">
+
+    <ion-nav-buttons side="left">
+        <button class="left button button-icon icon ion-arrow-left-c" ng-click="back()"></button>
+    </ion-nav-buttons>
+
+    <ion-content>
+
+        <div class="resposta">
+
+          <div class="logo">
+            <img src="img/cadastro.png">
+          </div>
+
+          <div class="certoerrado" ng-if="p3=='D'">
+            <img src="img/certo.png">
+            <p>Certo!</p>
+          </div>
+
+          <div class="certoerrado" ng-if="p3!='D'">
+            <img src="img/errado.png">
+            <p>Ops, errado!</p>
+          </div>
+
+          <hr>
+
+          <div class="repostacerta">
+            <div class="bandeira">
+              <img src="img/flag_big_bra.png">
+            </div>
+
+            <div class="texto">
+              <p class="paisBrasil">Brazil</p>
+            </div>
+          </div>
+
+          <div class="respostaserradas">
+            <p>Nas áreas de Reserva Legal o tamanho a ser preservado é
+              determinado pelo bioma no qual a propriedade está inserida.
+              Assim, 20% das áreas das propriedades rurais inseridas nos biomas
+              Pantanal, Mata Atlântica, Caatinga e Pampa devem ser preservadas.
+              Já no bioma Cerrado, a preservação é de 35% das áreas inseridas
+              na Amazônia Legal e 20% para as demais áreas. No caso do bioma
+              Amazônia a preservação deve ser de 80%. </p>
+          </div>
+
+          <hr>
+
+          <div class="fonte">
+            <p>Fonte: Código Florestal Brasileiro (Lei n. 12.651).</p>
+          </div>
+
+        </div>
+
+
+        <div class="rodape">
+            <div class="bolas">
+              <img src="img/bullet3.png" />
+            </div>
+            <div class="proxima">
+              <a ng-click="save()">Concluir</a>
+            </div>
+        </div>
+
+
+    </ion-content>
+</ion-view>

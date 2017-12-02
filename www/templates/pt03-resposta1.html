@@ -1,0 +1,73 @@
+<ion-view title="Quiz CNA - English">
+
+    <ion-nav-buttons side="left">
+      <button class="left button button-icon icon ion-arrow-left-c" ng-click="nextHome()"></button>
+    </ion-nav-buttons>
+
+    <ion-content>
+
+        <div class="resposta">
+
+          <div class="logo">
+            <img src="img/cadastro.png">
+          </div>
+
+          <div class="certoerrado" ng-if="p1=='C'">
+            <img src="img/certo.png">
+            <p>Certo!</p>
+          </div>
+
+          <div class="certoerrado" ng-if="p1!='C'">
+            <img src="img/errado.png">
+            <p>Ops, errado!</p>
+          </div>
+
+
+          <hr>
+
+          <div class="repostacerta">
+            <div class="bandeira">
+              <img src="img/flag_big_fra.png">
+            </div>
+
+            <div class="texto">
+              <p class="pais">Fança</p>
+              <p class="percentual">52%</p>
+            </div>
+          </div>
+
+          <div class="respostaserradas">
+            <div class="respostaerrada">
+              <img src="img/flag_ger.png"> 48%
+            </div>
+            <div class="respostaerrada">
+              <img src="img/flag_bra.png"> 34%
+            </div>
+            <div class="respostaerrada">
+              <img src="img/flag_usa.png"> 45%
+            </div>
+            <div class="respostaerrada">
+              <img src="img/flag_can.png"> 7%
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="fonte">
+            <p>Fonte: CHIAVARI, Joana; LOPES, Cristina Leme. “Legislação florestal e de uso da terra: uma comparação internacional entre Argentina, Brasil, Canadá, China, França, Alemanha e Estados Unidos”. Climate Policy Initiative (CPI). 2017.</p>
+          </div>
+
+        </div>
+
+
+        <div class="rodape">
+            <div class="bolas">
+              <img src="img/bullet1.png" />
+            </div>
+            <div class="proxima">
+              <a ng-click="nextP3()">Próxima</a>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

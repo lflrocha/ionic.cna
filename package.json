@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Quiz CNA",
   "dependencies": {
-    "cordova-ios": "^4.5.4",
+    "cordova-ios": "4.5.4",
     "cordova-plugin-console": "^1.1.0",
     "cordova-plugin-device": "^1.1.7",
     "cordova-plugin-ionic-webview": "^1.1.11",

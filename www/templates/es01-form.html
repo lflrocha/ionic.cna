@@ -1,0 +1,48 @@
+<ion-view title="Quiz CNA - Español">
+
+    <ion-nav-buttons side="left">
+      <button class="left button button-icon icon ion-arrow-left-c" ng-click="nextHome()"></button>
+
+    </ion-nav-buttons>
+
+    <ion-content>
+
+      <div class="cadastro">
+        <div class="logo">
+          <img src="img/cadastro.png">
+        </div>
+
+        <div class="texto">
+          <p>Registro:</p>
+        </div>
+
+        <div class="linha">
+          <p>Nombre:</p>
+          <input type="text" ng-model="inputForm.nome">
+
+        </div>
+
+        <div class="linha">
+          <p>Correo electrónico:</p>
+          <input type="text" ng-model="inputForm.email">
+        </div>
+
+        <div class="linha">
+          <p>Empresa:</p>
+          <input type="text" ng-model="inputForm.empresa">
+        </div>
+
+        <div class="linha">
+          <p>País:</p>
+          <input type="text" ng-model="inputForm.pais">
+        </div>
+      </div>
+
+      <div class="rodape">
+          <div class="proximacapa">
+            <a ng-click="nextP1(inputForm.nome, inputForm.email, inputForm.empresa, inputForm.pais)">Enviar</a>
+          </div>
+      </div>
+
+    </ion-content>
+</ion-view>

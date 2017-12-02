@@ -88,37 +88,126 @@ angular.module('starter', ['ionic'])
             "cache": false,
             "reload": true
         })
-        .state("item-es", {
-            "url": "/item-es/:documentId/:documentRevision",
-            "templateUrl": "templates/item-es.html",
+        .state("es01", {
+            "url": "/es01/:idioma",
+            "templateUrl": "templates/es01-form.html",
+            "controller": "MainController",
+            "params": {
+              idioma: null
+            },
+            "cache": false,
+            "reload": true
+        })
+        .state("es02", {
+            "url": "/es02/:idioma",
+            "templateUrl": "templates/es02-pergunta1.html",
+            "controller": "MainController",
+            "params": {
+              idioma: null
+            },
+            "cache": false,
+            "reload": true
+        })
+        .state("es03", {
+            "url": "/es03",
+            "templateUrl": "templates/es03-resposta1.html",
             "controller": "MainController",
             "cache": false,
             "reload": true
         })
-        .state("item-pt", {
-            "url": "/item-pt/:documentId/:documentRevision",
-            "templateUrl": "templates/item-pt.html",
+        .state("es04", {
+            "url": "/es04",
+            "templateUrl": "templates/es04-pergunta2.html",
             "controller": "MainController",
             "cache": false,
             "reload": true
         })
-        .state("obrigado-en", {
-            "url": "/obrigado-en",
-            "templateUrl": "templates/obrigado-en.html",
+        .state("es05", {
+            "url": "/es05",
+            "templateUrl": "templates/es05-resposta2.html",
             "controller": "MainController",
             "cache": false,
             "reload": true
         })
-        .state("obrigado-es", {
-            "url": "/obrigado-es",
-            "templateUrl": "templates/obrigado-es.html",
+        .state("es06", {
+            "url": "/es06",
+            "templateUrl": "templates/es06-pergunta3.html",
             "controller": "MainController",
             "cache": false,
             "reload": true
         })
-        .state("obrigado-pt", {
-            "url": "/obrigado-pt",
-            "templateUrl": "templates/obrigado-pt.html",
+        .state("es07", {
+            "url": "/es07",
+            "templateUrl": "templates/es07-resposta3.html",
+            "controller": "MainController",
+            "cache": false,
+            "reload": true
+        })
+        .state("es08", {
+            "url": "/es08",
+            "templateUrl": "templates/es08-obrigado.html",
+            "controller": "MainController",
+            "cache": false,
+            "reload": true
+        })
+        .state("pt01", {
+            "url": "/pt01/:idioma",
+            "templateUrl": "templates/pt01-form.html",
+            "controller": "MainController",
+            "params": {
+              idioma: null
+            },
+            "cache": false,
+            "reload": true
+        })
+        .state("pt02", {
+            "url": "/pt02/:idioma",
+            "templateUrl": "templates/pt02-pergunta1.html",
+            "controller": "MainController",
+            "params": {
+              idioma: null
+            },
+            "cache": false,
+            "reload": true
+        })
+        .state("pt03", {
+            "url": "/pt03",
+            "templateUrl": "templates/pt03-resposta1.html",
+            "controller": "MainController",
+            "cache": false,
+            "reload": true
+        })
+        .state("pt04", {
+            "url": "/pt04",
+            "templateUrl": "templates/pt04-pergunta2.html",
+            "controller": "MainController",
+            "cache": false,
+            "reload": true
+        })
+        .state("pt05", {
+            "url": "/pt05",
+            "templateUrl": "templates/pt05-resposta2.html",
+            "controller": "MainController",
+            "cache": false,
+            "reload": true
+        })
+        .state("pt06", {
+            "url": "/pt06",
+            "templateUrl": "templates/pt06-pergunta3.html",
+            "controller": "MainController",
+            "cache": false,
+            "reload": true
+        })
+        .state("pt07", {
+            "url": "/pt07",
+            "templateUrl": "templates/pt07-resposta3.html",
+            "controller": "MainController",
+            "cache": false,
+            "reload": true
+        })
+        .state("pt08", {
+            "url": "/pt08",
+            "templateUrl": "templates/pt08-obrigado.html",
             "controller": "MainController",
             "cache": false,
             "reload": true
@@ -162,77 +251,105 @@ angular.module('starter', ['ionic'])
     }
 
     $scope.nextCapa = function(idioma) {
-      $scope.idioma = idioma;
-      $rootScope.idioma = $scope.idioma;
-      $state.go("en01");
+      if (idioma) {
+        $scope.idioma = idioma;
+        $rootScope.idioma = $scope.idioma;
+        $state.go(idioma + "01");
+      }
+      else {
+        alert('Please select your language.');
+      }
     }
 
-    $scope.nextP1 = function(nome, email, empresa) {
-      $scope.idioma = $rootScope.idioma;
-      alert($scope.idioma);
+    $scope.nextP1 = function(nome, email, empresa, pais) {
+      idioma = $rootScope.idioma;
       if (nome && email && empresa) {
         $rootScope.nome = nome;
         $rootScope.email = email;
         $rootScope.empresa = empresa;
-        $state.go("en02");
+        $rootScope.pais = pais;
+        $state.go(idioma + "02");
       }
       else {
-        alert('Ops! Preencha o formulário!');
+        if (idioma == "en") {
+          alert("Please fill in all fields.");
+        } else if (idioma == "es") {
+          alert("Por favor, rellena todos los campos.");
+        } else if (idioma == "pt") {
+          alert("Por favor, preencha todos os campos.");
+        }
       }
     };
 
     $scope.nextP2 = function(p1) {
-      alert($rootScope.idioma + ' - ' + $rootScope.nome + ' - ' + $rootScope.email + ' - ' + $rootScope.empresa);
+      idioma = $rootScope.idioma;
       if (p1) {
         $rootScope.p1 = p1;
-        $state.go("en03");
+        $state.go(idioma + "03");
       }
       else {
-        alert('Ops!');
+
+        if (idioma == "en") {
+          alert("Please select an option.");
+        } else if (idioma == "es") {
+          alert("Por favor, seleccione una opción.");
+        } else if (idioma == "pt") {
+          alert("Por favor, selecione uma opção.");
+        }
       }
     };
 
     $scope.nextP3 = function() {
-      alert($rootScope.idioma + ' - ' + $rootScope.nome + ' - ' + $rootScope.email + ' - ' + $rootScope.empresa + ' - ' + $rootScope.p1);
-      $state.go("en04");
+      idioma = $rootScope.idioma;
+      $state.go(idioma + "04");
     };
 
     $scope.nextP4 = function(p2) {
-      alert($rootScope.idioma + ' - ' + $rootScope.nome + ' - ' + $rootScope.email + ' - ' + $rootScope.empresa + ' - ' + $rootScope.p1);
+      idioma = $rootScope.idioma;
       if (p2) {
         $rootScope.p2 = p2;
-        $state.go("en05");
+        $state.go(idioma + "05");
       }
       else {
-        alert('Ops!');
+        if (idioma == "en") {
+          alert("Please select an option.");
+        } else if (idioma == "es") {
+          alert("Por favor, seleccione una opción.");
+        } else if (idioma == "pt") {
+          alert("Por favor, selecione uma opção.");
+        }
       }
     };
 
     $scope.nextP5 = function() {
-      alert($rootScope.idioma + ' - ' + $rootScope.nome + ' - ' + $rootScope.email + ' - ' + $rootScope.empresa + ' - ' + $rootScope.p1 + ' - ' + $rootScope.p2);
-      $state.go("en06");
+      idioma = $rootScope.idioma;
+      $state.go(idioma + "06");
     };
 
     $scope.nextP6 = function(p3) {
-      alert($rootScope.idioma + ' - ' + $rootScope.nome + ' - ' + $rootScope.email + ' - ' + $rootScope.empresa + ' - ' + $rootScope.p1 + ' - ' + $rootScope.p2);
+      idioma = $rootScope.idioma;
       if (p3) {
         $rootScope.p3 = p3;
-        $state.go("en07");
+        $state.go(idioma + "07");
       }
       else {
-        alert('Ops!');
+        if (idioma == "en") {
+          alert("Please select an option.");
+        } else if (idioma == "es") {
+          alert("Por favor, seleccione una opción.");
+        } else if (idioma == "pt") {
+          alert("Por favor, selecione uma opção.");
+        }
       }
     };
 
-
-
     $scope.save = function() {
-
       var now = new Date();
       var jsonDocument = {
           "nome": $rootScope.nome,
           "email": $rootScope.email,
           "empresa": $rootScope.empresa,
+          "pais": $rootScope.pais,
           "pergunta1": $rootScope.p1,
           "pergunta2": $rootScope.p2,
           "pergunta3": $rootScope.p3,
@@ -244,11 +361,10 @@ angular.module('starter', ['ionic'])
           jsonDocument["_rev"] = $stateParams.documentRevision;
       }
       $pouchDB.save(jsonDocument).then(function(response) {
-          $state.go("en08");
+          $state.go(idioma + "08");
       }, function(error) {
           console.log("ERROR -> " + error);
       });
-
     }
 
     $scope.delete = function(id, rev) {
