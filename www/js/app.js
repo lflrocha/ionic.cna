@@ -13,7 +13,7 @@ angular.module('starter', ['ionic'])
     if(ionic.Platform.isAndroid()) {
         $pouchDB.sync("http://192.168.1.109:5984/quizcna");
     } else {
-        $pouchDB.sync("http://localhost:5984/quizcna");
+        $pouchDB.sync("http://192.168.1.109:5984/quizcna");
     }
 })
 
