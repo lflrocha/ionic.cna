@@ -1,4 +1,4 @@
-<ion-view title="Quiz CNA - English">
+<ion-view title="Quiz CNA - Português">
 
     <ion-nav-buttons side="left">
       <button class="left button button-icon icon ion-arrow-left-c" ng-click="nextHome()"></button>
@@ -8,8 +8,12 @@
     <ion-content>
 
       <div class="cadastro">
-        <div class="logo">
+        <div class="logoCadastro">
           <img src="img/cadastro.png">
+        </div>
+
+        <div class="disclaimer">
+          A Confederação da Agricultura e Pecuária do Brasil (CNA) agradece sua participação e respeita sua privacidade. Suas respostas não serão associadas aos seus contatos em nenhum momento e seus dados serão mantidos em sigilo.
         </div>
 
         <div class="texto">
@@ -17,23 +21,23 @@
         </div>
 
         <div class="linha">
-          <p>Nome:</p>
-          <input type="text" ng-model="inputForm.nome">
+          <p>Nome Completo:</p>
+          <input type="text" autocorrect="off" ng-model="inputForm.nome">
         </div>
 
         <div class="linha">
           <p>Email:</p>
-          <input type="text" ng-model="inputForm.email">
+          <input type="email" autocorrect="off" autocapitalize="off" ng-model="inputForm.email">
         </div>
 
         <div class="linha">
-          <p>Empresa:</p>
-          <input type="text" ng-model="inputForm.empresa">
+          <p>Empresa / Instituição:</p>
+          <input type="text" autocorrect="off" ng-model="inputForm.empresa">
         </div>
 
         <div class="linha">
           <p>País:</p>
-          <input type="text" ng-model="inputForm.pais">
+          <input type="text" autocorrect="off" ng-model="inputForm.pais">
         </div>
       </div>
 

@@ -83,13 +83,25 @@
 }
 
 .cadastro {
-  height: 82vh;
+  height: 84vh;
 }
 
-.cadastro .logo {
+.cadastro .logoCadastro {
   text-align: center;
-  margin-top: 6vh;
-  margin-bottom: 6vh;
+  height: 10vh;
+  margin: 4vh 0;
+}
+
+.cadastro .disclaimer {
+  text-align: center;
+  color: white;
+  font-family: "AsapBold";
+  font-size: 1.4em;
+  width: 70vw;
+  line-height: 1.4em;
+  text-transform: uppercase;
+  height: 18vh;
+  margin: 3vh auto;
 }
 
 .cadastro .texto {
@@ -100,15 +112,15 @@
   width: 70vw;
   line-height: 1.5em;
   text-transform: uppercase;
-  margin: 1vh auto 8vh auto;
+  margin: 1vh auto 2vh auto;
 }
 
 .cadastro .linha {
   font-family: "AsapRegular";
   width: 70vw;
-  font-size: 1em;
+  font-size: 1.5em;
   color: white;
-  margin: 0 auto 5vh auto;
+  margin: 0 auto 3vh auto;
 }
 
 .cadastro .linha p {

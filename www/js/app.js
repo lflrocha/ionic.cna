@@ -259,7 +259,7 @@ angular.module('starter', ['ionic'])
 
     $scope.nextP1 = function(nome, email, empresa, pais) {
       idioma = $rootScope.idioma;
-      if (nome && email && empresa) {
+      if (nome && email && empresa && pais) {
         $rootScope.nome = nome;
         $rootScope.email = email;
         $rootScope.empresa = empresa;
@@ -268,11 +268,11 @@ angular.module('starter', ['ionic'])
       }
       else {
         if (idioma == "en") {
-          alert("Please fill in all fields.");
+          alert("Please fill in all fields and a valid email.");
         } else if (idioma == "es") {
-          alert("Por favor, rellena todos los campos.");
+          alert("Por favor, rellena todos los campos e un email válido.");
         } else if (idioma == "pt") {
-          alert("Por favor, preencha todos os campos.");
+          alert("Por favor, preencha todos os campos e um email válido.");
         }
       }
     };
@@ -284,7 +284,6 @@ angular.module('starter', ['ionic'])
         $state.go(idioma + "03");
       }
       else {
-
         if (idioma == "en") {
           alert("Please select an option.");
         } else if (idioma == "es") {

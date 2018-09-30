@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.ionic.starter" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="cna.quiz" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Quiz CNA</name>
-    <description>An awesome Ionic/Cordova app.</description>
-    <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
-    <content original-src="index.html" src="http://192.168.1.109:8100" />
+    <description>An awesome RenderEasy app.</description>
+    <author email="lflrocha+apple@gmail.com" href="http://rendereasy.online/">RenderEasy Team</author>
+    <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -80,6 +80,7 @@
     <allow-navigation href="http://10.61.6.99:8101" />
     <allow-navigation href="http://10.61.6.99:8100" />
     <allow-navigation href="http://192.168.1.109:8100" />
+    <allow-navigation href="http://169.254.127.36:8100" />
     <engine name="ios" spec="4.5.4" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
     <plugin name="cordova-plugin-device" spec="^1.1.7" />

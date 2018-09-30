@@ -8,8 +8,12 @@
     <ion-content>
 
       <div class="cadastro">
-        <div class="logo">
+        <div class="logoCadastro">
           <img src="img/cadastro.png">
+        </div>
+
+        <div class="disclaimer">
+          The Brazilian Confederation of Agriculture and Livestock (CNA) thanks you for your participation and respects your privacy. Your answers will not be associated with your contact at any moment, and your personal information will be maintained confidentially.
         </div>
 
         <div class="texto">
@@ -17,24 +21,24 @@
         </div>
 
         <div class="linha">
-          <p>Name:</p>
-          <input type="text" ng-model="inputForm.nome">
+          <p>Full Name:</p>
+          <input type="text" autocorrect="off" ng-model="inputForm.nome">
 
         </div>
 
         <div class="linha">
           <p>E-mail:</p>
-          <input type="text" ng-model="inputForm.email">
+          <input type="email" autocorrect="off" autocapitalize="off" ng-model="inputForm.email">
         </div>
 
         <div class="linha">
-          <p>Company:</p>
-          <input type="text" ng-model="inputForm.empresa">
+          <p>Company / Institution:</p>
+          <input type="text" autocorrect="off" ng-model="inputForm.empresa">
         </div>
 
         <div class="linha">
           <p>Country:</p>
-          <input type="text" ng-model="inputForm.pais">
+          <input type="text" autocorrect="off"  ng-model="inputForm.pais">
         </div>
 
       </div>
