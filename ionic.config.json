@@ -1,6 +1,5 @@
 {
   "name": "QuizCNA",
-  "app_id": "7f1de337",
   "integrations": {
     "cordova": {}
   },
@@ -10,5 +9,6 @@
     "www/**/*",
     "!www/lib/**/*",
     "!www/**/*.map"
-  ]
+  ],
+  "pro_id": "7f1de337"
 }
